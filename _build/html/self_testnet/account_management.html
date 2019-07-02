@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Account-Management &#8212; fractal-docs 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="account-management">
+<h1>Account-Management<a class="headerlink" href="#account-management" title="Permalink to this headline">¶</a></h1>
+<p>After installing your version of go-fractal, you can generate your account for mining and send-transaction.
+Account-Management includes <code class="docutils literal notranslate"><span class="pre">three</span></code> steps, you can choose one according to actual condition:</p>
+<ol class="arabic simple">
+<li><p>generate account <a class="reference internal" href="start_node.html#generate-account-label"><span class="std std-ref">detail</span></a>.</p></li>
+<li><p>list account <a class="reference internal" href="#list-account-label"><span class="std std-ref">detail</span></a>.</p></li>
+<li><p>lookup balance <a class="reference internal" href="#lookup-balance-label"><span class="std std-ref">detail</span></a>.</p></li>
+</ol>
+<div class="section" id="generate-account">
+<h2>generate account<a class="headerlink" href="#generate-account" title="Permalink to this headline">¶</a></h2>
+<p><strong>WARNING</strong>
+Remember your password. The password is used for encryption of Miner key and Account key.
+Note that, <strong>password is different from Keys</strong> , and there are three kinds of keys:one is for mining and one is for account and one is for packer.
+packer key is not used for current time,it is for use later,ignore it.</p>
+<p>If you forget your password ,you will not be able to get your money back ,mine block with your existing balance , or send transactions any more.</p>
+<p><strong>Repeat: Backup your password</strong></p>
+<p>The fractal CLI <code class="docutils literal notranslate"><span class="pre">gtool</span></code> is used like this :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gtool &lt;main-command&gt; [options...] [arguments...] &lt;sub-command&gt;
+</pre></div>
+</div>
+<p>Generate account command is :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//make a directory , you may want to create more directories as your pleasure.
+$ mkdir data
+$ mkdir data1
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pass</span></code> argument for (data/keys and  data1/keys) should be the same ,we will use this feature in <a class="reference internal" href="start_node.html#generate-allocation-file-label"><span class="std std-ref">detail</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//--keys is where to put the keys , --pass is your password ,remember to set your own password
+$ gtool keys --keys data/keys --pass 666 newkeys
+New Account Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+New Mining Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+New Mining Public Key: 0x8a21ce8992d6f32450f95dfbea26fa4bb45222d2395a537ee1c079e049cb16cc04f703ba84d0f9df120ce1e45e1868b970bcb4deecc531a1d5634b8de6fea232637cc37b369891ce774a2fe6084f14e110734e97d65a15fb3ebbdc706ac0c21f54bbb1098e409d3e997823d9ea6cf1c0f055de91ea02b08653b90859c9a40c19
+New Packer Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+
+$ gtool keys --keys data1/keys --pass 666 newkeys
+New Account Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+New Mining Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+New Mining Public Key: 0x866c641dca6652119d2c2b9e06d30c08264ffc94e0bfa9694df54a8989939c9b5f41cb13f6e01373fa2e956ba5a388084024d399bb36ccd8438770a8971432556851804a0ccf2d8f0758aecf7b103802d8673f7c157fdcde39d3febc8ab18c65881b4eeb3f4db30ec0ed41280ea92d15494b604d0f56012706e26cfa8c7713fe
+New Packer Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+</pre></div>
+</div>
+<p>You can see three kinds of keys in <code class="docutils literal notranslate"><span class="pre">data/keys</span></code> directory.
+<strong>WARNING</strong> We want to transfer balance from A(<code class="docutils literal notranslate"><span class="pre">data/</span></code>) user to B(<code class="docutils literal notranslate"><span class="pre">data1</span></code>) user later ,so we create two accounts.
+The newest format of the three keyfiles are: account.json,packer.json,xxxx.mk.json.Note that all keys are stored in
+encryption. packer.json is not used unless you are selected as a packer, xxxx.mk.json is your miner key.</p>
+</div>
+<div class="section" id="list-account">
+<h2>list account<a class="headerlink" href="#list-account" title="Permalink to this headline">¶</a></h2>
+<p>If you want to look through informations like  account address ,miner address … etc,you can use this command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gtool keys --keys data/keys --pass 666 list
+Packer Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+Packer Public Key: 0x04511a4aeda4d6fc3855f67df8b62cd22d008af37f332578cb198dcaa93a09fae2ef2f88a30bf0fa3e96724786e4aa99c6f2a47a403ed18edbd05d52f8d4b1a2cd
+Account Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+Mining Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+Mining Public Key: 0x8a21ce8992d6f32450f95dfbea26fa4bb45222d2395a537ee1c079e049cb16cc04f703ba84d0f9df120ce1e45e1868b970bcb4deecc531a1d5634b8de6fea232637cc37b369891ce774a2fe6084f14e110734e97d65a15fb3ebbdc706ac0c21f54bbb1098e409d3e997823d9ea6cf1c0f055de91ea02b08653b90859c9a40c19
+</pre></div>
+</div>
+<p><strong>WARNING</strong> data/keys is your key directory , <code class="docutils literal notranslate"><span class="pre">--pass</span></code> is your password</p>
+</div>
+<div class="section" id="lookup-balance">
+<h2>lookup balance<a class="headerlink" href="#lookup-balance" title="Permalink to this headline">¶</a></h2>
+<p>balance information is store on chain ,so you need to assign a rpc connection.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gtool state --rpc http://127.0.0.1:8545 --addr 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5 account
+t=2019-07-02T18:48:36+0800 lvl=info msg=&quot;get head block ok&quot; height=23 round=1562064515 hash=0x1c36dc5132a024ae6afffddd02f43b36850c35bcd8fd2f09d45ff3ff730aa3d5
+t=2019-07-02T18:48:36+0800 lvl=info msg=&quot;get balance ok&quot; addr=0x24c6Baa88a465E9a6A64fACa0725eBb4F87414e5 balance=500211000000000
+t=2019-07-02T18:48:36+0800 lvl=info msg=&quot;get code ok&quot; addr=0x24c6Baa88a465E9a6A64fACa0725eBb4F87414e5 len=0 code=0x
+t=2019-07-02T18:48:36+0800 lvl=info msg=&quot;get owner ok&quot; addr=0x24c6Baa88a465E9a6A64fACa0725eBb4F87414e5 owner=0x0000000000000000000000000000000000000000
+</pre></div>
+</div>
+<p><strong>WARNING</strong> rpc is your node connection, addr is the account you want to check balance, if you don’t know it ,you can
+use list account <a class="reference internal" href="start_node.html#download-file-label"><span class="std std-ref">detail</span></a> command to get addr</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">fractal-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, fractal.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/self_testnet/account_management.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

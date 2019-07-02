@@ -1,0 +1,5 @@
+{
+    "rst.preview.pythonPath": "python3",
+    "restructuredtext.preview.sphinx.disabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}"
+}

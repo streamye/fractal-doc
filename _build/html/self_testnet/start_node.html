@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Starting-Node &#8212; fractal-docs 0.0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="starting-node">
+<h1>Starting-Node<a class="headerlink" href="#starting-node" title="Permalink to this headline">¶</a></h1>
+<p>includes <code class="docutils literal notranslate"><span class="pre">four</span></code> steps</p>
+<ol class="arabic simple">
+<li><p>download files <a class="reference internal" href="#download-file-label"><span class="std std-ref">detail</span></a>.</p></li>
+<li><p>generate account <a class="reference internal" href="#generate-account-label"><span class="std std-ref">detail</span></a>.</p></li>
+<li><p>generate allocation file <a class="reference internal" href="#generate-allocation-file-label"><span class="std std-ref">detail</span></a>.</p></li>
+<li><p>start node <a class="reference internal" href="#start-node-label"><span class="std std-ref">detail</span></a>.</p></li>
+</ol>
+<div class="section" id="download-files">
+<span id="download-file-label"></span><h2>download files<a class="headerlink" href="#download-files" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>There are four kinds of installation-files,follow the appropriate link below to find installation instructions for your platform.</dt><dd><p><a class="reference external" href="../installation_mac">installation_mac</a>.</p>
+<p><a class="reference external" href="../installation_windows">installation_windows</a>.</p>
+<p><a class="reference external" href="../installation_ubuntu">installation_ubuntu</a>.</p>
+<p><a class="reference external" href="../installation_centos">installation_centos</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="generate-account">
+<span id="generate-account-label"></span><h2>generate account<a class="headerlink" href="#generate-account" title="Permalink to this headline">¶</a></h2>
+<p>After downloading files from server,we have to generate account for mining and transaction.</p>
+<p><strong>WARNING</strong>
+Remember your password. The password is used for encryption of Miner key and Account key.
+Note that, <strong>password is different from Keys</strong> , and there are three kinds of keys:one is for mining and one is for account and one is for packer.
+packer key is not used for current time,it is for use later,ignore it.</p>
+<p>If you forget your password ,you will not be able to get your money back ,mine block with your existing balance , or send transactions any more.</p>
+<p><strong>Repeat: Backup your password</strong></p>
+<p>The fractal CLI <code class="docutils literal notranslate"><span class="pre">gtool</span></code> is used like this :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gtool &lt;main-command&gt; [options...] [arguments...] &lt;sub-command&gt;
+</pre></div>
+</div>
+<p>Generate account command is :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//make a directory , you may want to create more directories as your pleasure.
+$ mkdir data
+$ mkdir data1
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">pass</span></code> argument for (data/keys and  data1/keys) should be the same ,we will use this feature in <a class="reference internal" href="#generate-allocation-file-label"><span class="std std-ref">detail</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//--keys is where to put the keys , --pass is your password ,remember to set your own password
+$ gtool keys --keys data/keys --pass 666 newkeys
+New Account Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+New Mining Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+New Mining Public Key: 0x8a21ce8992d6f32450f95dfbea26fa4bb45222d2395a537ee1c079e049cb16cc04f703ba84d0f9df120ce1e45e1868b970bcb4deecc531a1d5634b8de6fea232637cc37b369891ce774a2fe6084f14e110734e97d65a15fb3ebbdc706ac0c21f54bbb1098e409d3e997823d9ea6cf1c0f055de91ea02b08653b90859c9a40c19
+New Packer Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+
+$ gtool keys --keys data1/keys --pass 666 newkeys
+New Account Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+New Mining Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+New Mining Public Key: 0x866c641dca6652119d2c2b9e06d30c08264ffc94e0bfa9694df54a8989939c9b5f41cb13f6e01373fa2e956ba5a388084024d399bb36ccd8438770a8971432556851804a0ccf2d8f0758aecf7b103802d8673f7c157fdcde39d3febc8ab18c65881b4eeb3f4db30ec0ed41280ea92d15494b604d0f56012706e26cfa8c7713fe
+New Packer Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
+</pre></div>
+</div>
+<p>You can see three kinds of keys in <code class="docutils literal notranslate"><span class="pre">data/keys</span></code> directory.
+<strong>WARNING</strong> We want to transfer balance from A(<code class="docutils literal notranslate"><span class="pre">data/</span></code>) user to B(<code class="docutils literal notranslate"><span class="pre">data1</span></code>) user later ,so we create two accounts.</p>
+</div>
+<div class="section" id="generate-allocation">
+<h2>generate allocation<a class="headerlink" href="#generate-allocation" title="Permalink to this headline">¶</a></h2>
+<p>This is a must step of alone-testnet, if we want to mine, we need stakes(account balance),original stakes is allocated in allocation-file.This step is to create
+an allocation-file.
+generate allocation command is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gtool gstate --pass 666 gen
+scan folder: data
+scan folder: data1
+</pre></div>
+</div>
+<p><strong>WARNING</strong>
+<code class="docutils literal notranslate"><span class="pre">--pass</span></code> is your password, but for testnet environment,password for data/keys and password for data1/keys need to be the same,we would improve this later on.
+this command scans current directory to check <code class="docutils literal notranslate"><span class="pre">keys</span></code> directory,and generate <code class="docutils literal notranslate"><span class="pre">genesis_alloc.json</span></code> file ,you need to use this file later on.</p>
+</div>
+<div class="section" id="start-node">
+<h2>start node<a class="headerlink" href="#start-node" title="Permalink to this headline">¶</a></h2>
+<p>This the final step of starting-node,in this step, one fractal node will be running.
+start node command is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gftl</span> <span class="o">--</span><span class="n">config</span> <span class="n">test</span><span class="o">.</span><span class="n">toml</span> <span class="o">--</span><span class="n">genesisAlloc</span> <span class="n">genesis_alloc</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">rpc</span> <span class="o">--</span><span class="n">rpcport</span> <span class="mi">8545</span> <span class="o">--</span><span class="n">datadir</span> <span class="n">data</span> <span class="o">--</span><span class="n">port</span> <span class="mi">30303</span> <span class="o">--</span><span class="n">pprof</span> <span class="o">--</span><span class="n">pprofport</span> <span class="mi">6060</span> <span class="o">--</span><span class="n">verbosity</span> <span class="mi">3</span> <span class="o">--</span><span class="n">mine</span> <span class="o">--</span><span class="n">unlock</span> <span class="mi">666</span>
+</pre></div>
+</div>
+<p><strong>WARNING</strong> test.toml is chain config file,genesis_alloc.json is balance allocation,rpc port is an http server to receive message from user,
+data is your mining data directory,–mine is mining-open flag,–unlock is your password.</p>
+<p>If you want start a node and connect to a known one ,use <code class="docutils literal notranslate"><span class="pre">enode</span></code>,below is data1 node connects to data node,change ports if you run data1 node on the same physical machine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gftl</span> <span class="o">--</span><span class="n">config</span> <span class="n">test</span><span class="o">.</span><span class="n">toml</span> <span class="o">--</span><span class="n">genesisAlloc</span> <span class="n">genesis_alloc</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">rpc</span> <span class="o">--</span><span class="n">rpcport</span> <span class="mi">8546</span> <span class="o">--</span><span class="n">datadir</span> <span class="n">data1</span> <span class="o">--</span><span class="n">port</span> <span class="mi">30304</span> <span class="o">--</span><span class="n">pprof</span> <span class="o">--</span><span class="n">pprofport</span> <span class="mi">6061</span> <span class="o">--</span><span class="n">verbosity</span> <span class="mi">3</span> <span class="o">--</span><span class="n">mine</span> <span class="o">--</span><span class="n">unlock</span> <span class="mi">666</span> <span class="o">--</span><span class="n">bootnodes</span> <span class="n">enode</span><span class="p">:</span><span class="o">//</span><span class="mi">2</span><span class="n">b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e</span><span class="nd">@127</span><span class="o">.</span><span class="mf">0.0</span><span class="o">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">30303</span>
+</pre></div>
+</div>
+<p>You can get enode using this command:</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">fractal-docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, fractal.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/self_testnet/start_node.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
