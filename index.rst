@@ -16,7 +16,7 @@ can just start a self-testnet as starter.
 Main entry points:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    installation
