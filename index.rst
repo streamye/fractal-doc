@@ -19,8 +19,8 @@ Main entry points:
    :maxdepth: 2
    :caption: Contents:
 
-   installation
-   mining
+   self_testnet/steps_index
+   
    
 
 Indices and tables
