@@ -8,7 +8,7 @@ There are two steps here , first download files ,second add files to executable 
 
 Step1
 ''''''
-By far the easiest way to use go-fractal is to download directly.There is a zip file including four kind of files,you can download `here  <./_static/mac_file/fractal.zip>`_:
+By far the easiest way to use go-fractal is to download directly.There is a zip file including four kind of files,you can download `here  <_static/mac_file/gftl.macos.v0.1.0.zip>`_:
 Four files are:
 
 - 1. main executable file ``gftl`` , used for startting a node. 

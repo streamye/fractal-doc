@@ -19,14 +19,14 @@ For simple use, you can just start a ``self-testnet`` as starter.After building 
 
 **First One**:``self-testnet`` it means playing around all by yourself.
 
-        1.simple way: download `fractal <installation.html>`_ files according to your platform,unzip it ,run ``start_self.sh``
+        1.simple way: download `fractal <installation.html>`_ files according to your platform,unzip it , ``chmod +x start_self.sh`` to make it executable , then run ``./start_self.sh``.Go to  `start_self <start_self.html>`_ to see details.
         
         2.a detailed way: go to :ref:`self testnet <index-label>`,it will show you how to start a node step-by-step
 
 
 **Second One**: ``main-testnet`` it means startting nodes to play around with other guys,mainly fractal nodes.
 
-        1.simple way: download `fractal <installation.html>`_ files according to your platform,unzip it ,run ``start_main.sh``
+        1.simple way: download `fractal <installation.html>`_ files according to your platform,unzip it ,run ``start_main.sh``. Go to  `start_main <start_main.html>`_ to see details.
         
         2.a detailed way: go to :ref:`main testnet <index-label>`,it will show you how to start a node step-by-step
 
