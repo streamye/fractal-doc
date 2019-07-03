@@ -1,18 +1,17 @@
 
-HOME
+Self Testnet
 -----------------------------------------
-Welcome to fractal-docs's documentation for building an **alone-testnet** environment.
+Welcome to fractal-docs's documentation for building an **self-testnet** environment.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **Notes**:
 ''''''''''
-By alone-testnet ,we mean only the nodes started by yourself are in this environment.
-You can allocate stakes(or account balance) for yourself,whereas in **standord-testnet**
-environment you need to request stakes from fractal-account;you can start nodes alone without
-connectting to **standord-testnet**.
+By self-testnet ,we mean only the nodes started by yourself are in this environment.
+You can allocate stakes(or account balance) for yourself,whereas in **main-testnet**
+environment you need to request stakes from ``fractal-account``.
 
-This is the Wiki for the official fractal Starting-Node,Account-Management, Transaction and Smart-Contract.
-Considering a typical user's basic use-path:a typical user may want to start a node -> generate account -> send transaction -> lookup balance.
-A typical user need to look through Starting-Node,Transaction.1,Account-Management.3 .
+This is the Wiki for the official fractal **start-Node**, **account-management** , **transaction** and **smart-contract**.
+Considering a typical user's ``basic-use-path``: a typical user may want to : ``start a node`` -> ``generate account`` -> ``send transaction`` -> ``lookup balance``.
+Then he(or she) needs to look through `start-node <start_node>`_, `transaction.1 <transaction>`_ , `account-management.3  <account_management>`_ .
 Another typical scene is deploy-smart-contract which is not expanded here, you can lookup `smart contract <smart_contract>`_.
 Remind yourself that they maybe Partially coincident such as: you must generate account when you ``Starting-Node``,and generate account
 is actually included in Account-Management.
