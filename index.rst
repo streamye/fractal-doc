@@ -16,8 +16,16 @@ can just start a self-testnet as starter.
 Main entry points:
 
 .. toctree::
-    :numbered:
-    :maxdepth: 2
+   :maxdepth: 1
+   :caption: Contents:
 
-   self testnet <./self_test/steps_index>
-   main testnet 
+   installation
+   mining
+   
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
