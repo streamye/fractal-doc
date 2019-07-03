@@ -27,7 +27,7 @@ starting-node includes ``four`` steps , click details `here <start_node.html>`_:
 4. start node .
 
 
-account-management includes ``three`` steps, click details `here <account_management>`_:
+account-management includes ``three`` steps, click details `here <account_management.html>`_:
 
 1. generate account .
 
@@ -36,7 +36,7 @@ account-management includes ``three`` steps, click details `here <account_manage
 3. lookup balance .
 
 
-transaction includes ``one`` step, click details `here <transaction>`_:
+transaction includes ``one`` step, click details `here <transaction.html>`_:
 
 1. send transaction.
 
