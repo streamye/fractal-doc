@@ -1,7 +1,7 @@
 Account-Management 
 -------------------
 After installing your version of go-fractal, you can generate your account for mining and send-transaction.
-Account-Management includes ``three`` steps, you can choose one according to actual condition:
+account-management includes ``three`` steps, you can choose one according to actual requirement:
 
 1. generate account :ref:`detail <generate-account-label>`.
 
@@ -12,12 +12,14 @@ Account-Management includes ``three`` steps, you can choose one according to act
 
 
 .. _generate-account-label:
+
 generate account 
 ^^^^^^^^^^^^^^^^^
 **WARNING**
-Remember your password. The password is used for encryption of Miner key and Account key.
-Note that, **password is different from Keys** , and there are three kinds of keys:one is for mining and one is for account and one is for packer.
-packer key is not used for current time,it is for use later,ignore it.
+Remember your password. The password is used for encryption of ``miner key`` , ``account key`` and ``packer key``.
+Note that, **password is different from keys** ,it is used to protect keys, so keys can be transfered in encryption, 
+There are three kind of keys:one is for mining and one is for account and one is for packer.
+Packer key is not used for current time,it is used if you are packer,so just ignore it.
 
 If you forget your password ,you will not be able to get your money back ,mine block with your existing balance , or send transactions any more.
 
@@ -33,7 +35,8 @@ Generate account command is :
     $ mkdir data
     $ mkdir data1
 
-``pass`` argument for (data/keys and  data1/keys) should be the same ,we will use this feature in :ref:`detail <generate-allocation-file-label>`
+``pass`` argument for (data/keys and  data1/keys) should be the same ,
+we will use this feature in :ref:`generate allocation <generate-allocation-file-label>`
 ::
     //--keys is where to put the keys , --pass is your password ,remember to set your own password
     $ gtool keys --keys data/keys --pass 666 newkeys
@@ -48,12 +51,13 @@ Generate account command is :
     New Mining Public Key: 0x866c641dca6652119d2c2b9e06d30c08264ffc94e0bfa9694df54a8989939c9b5f41cb13f6e01373fa2e956ba5a388084024d399bb36ccd8438770a8971432556851804a0ccf2d8f0758aecf7b103802d8673f7c157fdcde39d3febc8ab18c65881b4eeb3f4db30ec0ed41280ea92d15494b604d0f56012706e26cfa8c7713fe
     New Packer Key Address: 0xc402b930dbe2a2fec29dc4699dc0c17f19805949
 
-You can see three kinds of keys in ``data/keys`` directory.
+You can see three kind of keys in ``data/keys`` directory.
 **WARNING** We want to transfer balance from A(``data/``) user to B(``data1``) user later ,so we create two accounts.
-The newest format of the three keyfiles are: account.json,packer.json,xxxx.mk.json.Note that all keys are stored in 
-encryption. packer.json is not used unless you are selected as a packer, xxxx.mk.json is your miner key.
+The newest format of the three keyfiles are: ``account.json``, ``packer.json``, ``xxxx.mk.json`` . Note that all keys are stored in 
+encryption. ``packer.json`` is not used unless you are selected as a packer,  ``xxxx.mk.json`` is your miner key.
 
 .. _list-account-label:
+
 list account
 ^^^^^^^^^^^^^^
 If you want to look through informations like  account address ,miner address ... etc,you can use this command:
@@ -68,6 +72,7 @@ If you want to look through informations like  account address ,miner address ..
 
 
 .. _lookup-balance-label:
+
 lookup balance
 ^^^^^^^^^^^^^^^
 balance information is store on chain ,so you need to assign a rpc connection.
@@ -79,7 +84,7 @@ balance information is store on chain ,so you need to assign a rpc connection.
     t=2019-07-02T18:48:36+0800 lvl=info msg="get owner ok" addr=0x24c6Baa88a465E9a6A64fACa0725eBb4F87414e5 owner=0x0000000000000000000000000000000000000000
 
 **WARNING** rpc is your node connection, addr is the account you want to check balance, if you don't know it ,you can 
-use list account :ref:`detail <download-file-label>` command to get addr
+use :ref:`list account <list-account-label>` command to get addr
 
 
 

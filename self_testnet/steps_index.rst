@@ -9,14 +9,14 @@ By self-testnet ,we mean only the nodes started by yourself are in this environm
 You can allocate stakes(or account balance) for yourself,whereas in **main-testnet**
 environment you need to request stakes from ``fractal-account``.
 
-This is the Wiki for the official fractal **start-Node**, **account-management** , **transaction** and **smart-contract**.
+This is the Wiki for the official fractal **start-node**, **account-management** , **transaction** and **smart-contract**.
 Considering a typical user's ``basic-use-path``: a typical user may want to : ``start a node`` -> ``generate account`` -> ``send transaction`` -> ``lookup balance``.
 Then he(or she) needs to look through `start-node <start_node>`_, `transaction.1 <transaction>`_ , `account-management.3  <account_management>`_ .
 Another typical scene is ``deploy-smart-contract`` which is not expanded here, you can lookup `smart contract <smart_contract>`_.
 Remind yourself that the four chapters maybe partially coincident , for example: you must ``generate account`` when you ``start-node``,and ``generate account``
 is actually included in account-management.
 
-starting-node includes ``four`` steps , click details `here <start_node.html>`_:
+start-node includes ``four`` steps , click details `here <start_node.html>`_:
 
 1. download files .
 
