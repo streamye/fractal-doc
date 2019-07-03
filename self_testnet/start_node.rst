@@ -18,13 +18,11 @@ download files
 
 There are four kind of installation-files,follow the appropriate link below to find installation instructions for your platform.
 
--    `installation_mac <../installation_mac>`_.
+-    `installation_mac <../installation_mac.html>`_.
 
--    `installation_windows <../installation_windows>`_.
+-   `installation_ubuntu <../installation_ubuntu.html>`_.
 
--   `installation_ubuntu <../installation_ubuntu>`_.
-
--    `installation_centos <../installation_centos>`_.
+-    `installation_centos <../installation_centos.html>`_.
 
 .. _generate-account-label:
 

@@ -1,18 +1,21 @@
 Download Instructions for Mac OS X
 ---------------------------------------
 
-First Method:   Download directly
+Download directly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+There are two steps here , first download files ,second add files to executable path . See details below.
 
 Step1
 ''''''
-By far the easiest way to use go-fractal is to download directly.There is a zip file including four kinds of files,you can download `gftl  <./_static/mac_file/fractal.zip>`_:
+By far the easiest way to use go-fractal is to download directly.There is a zip file including four kind of files,you can download `here  <./_static/mac_file/fractal.zip>`_:
 Four files are:
 
-- 1. main executable file ``gftl`` . 
-- 2. tool file ``gtool``.
-- 3. wasm lib file ``lib`` .
-- 4. main chain config file ``test.toml``.
+- 1. main executable file ``gftl`` , used for startting a node. 
+- 2. tool file ``gtool``,used for account management etc...
+- 3. wasm lib file ``lib`` , a virtual machine lib.
+- 4. main chain config file ``test.toml``, you need to use it when you start node.
+- 5. wasmtest file executable ``wasmtest``, for smart contract use.
 
 Step2
 ''''''
