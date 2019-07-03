@@ -16,7 +16,7 @@ Another typical scene is ``deploy-smart-contract`` which is not expanded here, y
 Remind yourself that the four chapters maybe partially coincident , for example: you must ``generate account`` when you ``start-node``,and ``generate account``
 is actually included in account-management.
 
-starting-node includes ``four`` steps , click details `here <start_node>`_:
+starting-node includes ``four`` steps , click details `here <start_node.html>`_:
 
 1. download files .
 
