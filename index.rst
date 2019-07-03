@@ -8,13 +8,16 @@ HOME
 -----------------------------------------
 Welcome to fractal-docs's documentation!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This is the Wiki for the official fractal Installation , Accounts and Mining.
+This is the Wiki for the official fractal start-node, Accounts and transactions.Mining is included in start-node.
+You can play around all by yourself(we call self-testnet) or connect to main-testnet to play around with other guys.
+The main difference is that you have to get balance from main-testnet if you want to start-mining,for simple use, one 
+can just start a self-testnet as starter.
 
 Main entry points:
 
 .. toctree::
-   :maxdepth: 2
+    :numbered:
+    :maxdepth: 2
 
-    installation
-    managing_account
-    mining
+   self testnet <./self_test/steps_index>
+   main testnet 
