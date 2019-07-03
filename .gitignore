@@ -1,0 +1,16 @@
+# 忽略mac DS_Store文件
+*.DS_Store
+*.rlp
+
+#
+Thumbs.db
+
+# 忽略sublime工程文件
+*.sublime-project
+.sublime-workspace
+
+#
+.idea
+.vscode
+_build
+
