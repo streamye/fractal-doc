@@ -31,37 +31,64 @@ After you download files, you need to decompress and run it. Here we take macOS 
 
 1.If you want to start a ``Private-Network``
 
+step 1: decompress file to current directory 
+
 .. code-block:: bash 
 
-    //decompress file to current directory 
     $ tar -zxvf gftl.macos.v0.1.0.tar.gz  -C .   
 
-    //enter gftl.macos.v0.1.0
+step 2: enter gftl.macos.v0.1.0
+
+.. code-block:: bash 
+
     $ cd gftl.macos.v0.1.0   
 
-    //make it executable 
+step 3: make it executable 
+
+.. code-block:: bash 
+
     $ chmod +x start_private.sh 
 
-    //start node
+step 4: start node
+
+.. code-block:: bash 
+
     $ ./start_private.sh 
 
 
 2.If you want to start a ``TestNetwork``:
 
+step 1: decompress file to current directory 
+
 .. code-block:: bash 
 
-    //decompress file to current directory 
     $ tar -zxvf gftl.macos.v0.1.0.tar.gz  -C .   
 
-    //enter gftl.macos.v0.1.0
+step 2: enter gftl.macos.v0.1.0
+
+.. code-block:: bash 
+
     $ cd gftl.macos.v0.1.0   
 
-    //make it executable 
+step 3: make it executable 
+
+.. code-block:: bash 
+
     $ chmod +x start.sh 
     
-    //start node
+step 4: start node
+
+.. code-block:: bash 
+
     $ ./start.sh 
 
+**NOTE: If you want to start mining for yourself, go on reading, otherwise you can stop here.**
+
+step 5: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
+
+step 6: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
+
+step 7: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
 
 | **NOTE**
 |  The main difference between ``Private-Network`` and ``TestNetwork`` is that you have to get balance from ``Testnetwork`` if you want to start-mining,
@@ -91,26 +118,26 @@ We have used ``start_private.sh`` or ``start.sh`` for several times, now we expl
 
 .. code-block:: bash 
 
-    $ ./start_self.sh
+    $ ./start_private.sh
 
 2. clean files: this command deletes all files to restore the original files state
 
 .. code-block:: bash 
 
-    $ ./start_self.sh del
+    $ ./start_private.sh del
 
 
 3. check: this command checks whether the fractal node runs well
 
 .. code-block:: bash 
 
-    $ ./start_self.sh check
+    $ ./start_private.sh check
 
 
 4. stop: it stops fractal node, shut it down
 
 .. code-block:: bash 
 
-    $ ./start_self.sh stop
+    $ ./start_private.sh stop
 
 

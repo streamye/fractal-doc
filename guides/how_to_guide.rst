@@ -84,13 +84,65 @@ Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` 
 
 How to Start a **TestNetwork** step by step
 -----------------------------------------------------
+Make sure you have a clean directory which only contains original fractal files. If you have run 
 
+.. code-block:: bash 
+
+    $ ./start_private.sh
+    or 
+    $ ./start.sh
+
+before, you need to run commands below to restore a clean directory
+
+.. code-block:: bash 
+
+    $ ./start_private.sh del
+    or 
+    $ ./start.sh del
+
+1. make directories to store keys and chaindata
+
+.. code-block:: bash 
+
+    $ mkdir data
+    
+2. generate account 
+
+.. code-block:: bash 
+
+    $ ./gtool keys --keys data/keys --pass 666 newkeys
+    New Account Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+    New Mining Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+    New Mining Public Key: 0x8a21ce8992d6f32450f95dfbea26fa4bb45222d2395a537ee1c079e049cb16cc04f703ba84d0f9df120ce1e45e1868b970bcb4deecc531a1d5634b8de6fea232637cc37b369891ce774a2fe6084f14e110734e97d65a15fb3ebbdc706ac0c21f54bbb1098e409d3e997823d9ea6cf1c0f055de91ea02b08653b90859c9a40c19
+    New Packer Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
+
+
+You can see three kind of keys in ``data/keys`` directory.
+
+3. start nodes, ``data`` node connects ``Fractal Testnetwork`` node using ``enode`` flag.
+**remember to change enode to connect to official fractal node, you can get enode from**  `Fractal Bootnodes <xxxxxx>`_
+
+.. code-block:: bash 
+
+    $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log &
+
+**WARNNG** Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them, for example: adding 1 to the port number.
+
+**NOTE: If you want to start mining for yourself, go on reading, otherwise you can stop here.**
+
+step 4: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
+
+step 5: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
+
+step 6: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
 
 
 How to Send a Transaction step by step
 -----------------------------------------------------
 Once you have started a **Testnetwork** or **Private-Network**, you can send transactions
-:: 
+
+.. code-block:: bash 
+
     $  gtool tx --rpc http://127.0.0.1:8545 --to 0xc402b930dbe2a2fec29dc4699dc0c17f19805949  --chainid 999 --keys data/keys --pass 666 send
     t=2019-07-02T19:35:12+0800 lvl=info msg="get nonce ok" nonce=0
     t=2019-07-02T19:35:12+0800 lvl=info msg="send tx success" hash=0x823e7dde4a4a68fad223beaf47124deeec0534a81a838add639b2a9374ed3ca4
