@@ -130,11 +130,11 @@ You can see three kind of keys in ``data/keys`` directory.
 
 **NOTE: If you want to start mining for yourself, go on reading, otherwise you can stop here.**
 
-step 4: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
+4: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
 
-step 5: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
+5: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
 
-step 6: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
+6: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
 
 
 How to Send a Transaction step by step
