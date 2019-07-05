@@ -6,7 +6,7 @@
 
 HOME
 ^^^^^^
-Welcome to fractal-docs's documentation!
+Welcome to Fractal-Deployment's documentation!
 
 Introduction
 ==============
@@ -17,8 +17,8 @@ it provides secure scalability solutions to handle 1,000x more transactions than
 
 Who Deployment Doc Is For
 ---------------------------
-This Doc is for those who wants to start Fractal node for mining, do some tests such as : deploying a smart contract, managing accounts or 
-send transactions .
+This Doc is for those who want to start fractal node for mining, do some tests such as : deploying a smart contract, managing accounts and 
+send transactions.
 
 
 How to Use this Doc
@@ -29,11 +29,11 @@ delve into details on a topic; we typically revisit the topic in a later chapter
 
 You’ll find three chapters in this Doc:
 
-- `Getting Started <gettting_started.html>`_  explains how to install Fractal , how to Get Your First Block and Fractal’s executable main program and tools. Here we provide ``Private-Testnetwork`` and ``Testnetwork`` because of a little difference.
+- `Getting Started <guides/gettting_started.html>`_  explains how to install Fractal , how to Get Your First Block and more about how to use script file ``start_private.sh``. Here we provide ``Private-Network`` and ``TestNetwork`` for you to start.
 
-- `How To Guides <how_to_guide.html>`_ is a detailed hands-on introduction to start node. Here we just list steps , and later chapter 3 will provide additional detail. 
+- `How To Guides <guides/how_to_guide.html>`_ is a detailed hands-on introduction to start node, it is more flexible than `Getting Started <guides/gettting_started.html>`_. Here we list steps , and later chapter 3 will provide additional details. 
 
-- `Usage <usage.html>`_ is usage description of every command in detail.
+- `Usage <guides/usage.html>`_ is usage description of every command in detail.
 
 
 

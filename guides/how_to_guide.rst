@@ -1,7 +1,9 @@
-How-To Guides
+How To Guides
 =============
-In this chapter we will discard ``start_x.sh`` script because it is not flexible such as:
-maybe you want to start more fractal nodes , send transaction etc .
+**Chapter 2**
+
+In this chapter we will discard ``start_x.sh`` script because it is not flexible:
+maybe you want to start more fractal nodes, send transaction etc.
 Here we introduce you a few common ``How To``  step-by-step. 
 You’ll learn:
 
@@ -18,16 +20,34 @@ You’ll learn:
 
 How to Start a **Private-Network** step by step
 -----------------------------------------------------
-Make sure you have a clean directory which only contains original fractal files.If you have run ``$ ./start_private.sh`` or ``$ ./start.sh``before,
-you need to run ``$ ./start_private.sh del`` or ``$ ./start.sh del``.
+Make sure you have a clean directory which only contains original fractal files. If you have run 
+
+.. code-block:: bash 
+
+    $ ./start_private.sh
+    or 
+    $ ./start.sh
+
+before, you need to run commands below to restore a clean directory
+
+.. code-block:: bash 
+
+    $ ./start_private.sh del
+    or 
+    $ ./start.sh del
 
 1. make directories to store keys and chaindata
-::
+
+.. code-block:: bash 
+
     //make two directories because we want to transfer balance from A to B , you may want to create more directories as your pleasure.
     $ mkdir data
     $ mkdir data1
-2. generate account , ``--pass`` of ``data/keys`` and ``data1/key`` should be the same
-::
+    
+2. generate account , password after ``--pass`` of ``data/keys`` and ``data1/key`` should be the same
+
+.. code-block:: bash 
+
     $ ./gtool keys --keys data/keys --pass 666 newkeys
     New Account Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
     New Mining Key Address: 0x24c6baa88a465e9a6a64faca0725ebb4f87414e5
@@ -50,15 +70,17 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
 
 ``gstate`` scans current directory to check ``keys`` directory, and generate ``genesis_alloc.json`` file.
 
-4. start nodes
-::
+4. start nodes, ``data1`` node connects ``data`` node using ``enode`` flag
+
+.. code-block:: bash 
+
     $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8545 --datadir data --port 30303 --pprof --pprofport 6060 --verbosity 3 --mine --unlock 666 > gftl.log &
     $ ./gtool admin --rpc http://127.0.0.1:8545 enode
     $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log &
 
-**WARNNG** The second ``./gtool admin`` command can generate ``enode`` which is used in the third command, you must change the third ``nohup`` command.
-Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them such as adding 1 to the port number.
-The second.
+**WARNNG** The second ``./gtool admin`` command can generate ``enode`` which is used in the third command, you must change the third ``nohup`` command's ``enode`` argument.
+Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them, for example: adding 1 to the port number.
+
 
 How to Start a **Testnetwork** step by step
 -----------------------------------------------------
@@ -75,13 +97,13 @@ Once you have started a **Testnetwork** or **Private-Network**, you can send tra
     t=2019-07-02T19:35:14+0800 lvl=info msg="recv tx rsp" from=0xDc19ab8A51Ac78eb99392262e26681d64ba66317 nonce=0 hash=0x823e7dde4a4a68fad223beaf47124deeec0534a81a838add639b2a9374ed3ca4 to=0xC402B930dBe2a2FEc29dC4699DC0C17F19805949 receipt=<nil>
 
 **WARNNG** you need to change ``rpc`` url , if your node address is not ``http://127.0.0.1:8545`` , but if you run ``start_private.sh`` or ``start.sh`` to startup nodes, the ``rpc`` url is default to 
-``http://127.0.0.1:8545``, the ``to`` argument is the address you want to transfer stakes to, you can change it.If you don't know the ``to`` address,
-you can use  ``gtool keys --keys data/keys --pass 666 list`` to find the address.
+``http://127.0.0.1:8545``; the ``to`` argument is the address you want to transfer balance to, you can change it. If you don't know the ``to`` address,
+you can use  ``gtool keys --keys data/keys --pass 666 list`` to find the local address.
 
 
 How to Deploy a Smart Contract
 -----------------------------------------------------
-Smart Contract steps is not expanded here, go `smart contract <xxxx>`_.
+Smart Contract steps are not expanded here, go `smart contract <xxxx>`_ to get more information.
 
 
 
