@@ -82,7 +82,7 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
 Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them, for example: adding 1 to the port number.
 
 
-How to Start a **Testnetwork** step by step
+How to Start a **TestNetwork** step by step
 -----------------------------------------------------
 
 

@@ -22,8 +22,7 @@ Download
 
  | **Command Line Notation**
  | In this chapter and throughout the book, we’ll show some commands used in the terminal. 
- | Lines that you should enter in a terminal all start with $. You don’t need to type in the $ character; 
- | it indicates the start of each command. Lines that don’t start with $ typically show the output of the previous command. 
+ | Lines that you should enter in a terminal all start with $. You don’t need to type in the $ character; it indicates the start of each command. Lines that don’t start with $ typically show the output of the previous command. 
  | ``//`` is comment, don't copy words after that.
 
 Start Node

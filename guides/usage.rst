@@ -11,6 +11,7 @@ We list here:
 - gtool state
 - gtool tx
 - gftl 
+- wasmtest exec
 
 | The fractal CLI ``gtool`` is used like this :
 | ``$ gtool <main-command> [options...] [arguments...] <sub-command>``
@@ -173,3 +174,19 @@ You can get ``enode`` using ``gtool admin`` command:
 **WARNING** If you want to check one node's enode, you need to assign rpc server.
 
 
+wasmtest exec
+--------------
+This command lets you test your smart contract to check whether it is wrong or not.
+ 
+test command is:
+
+.. code-block:: bash 
+
+    $ wasmtest --wasm hello.wasm --abi hello.abi --action hi --args '["Alice"]' exec
+
+| ``--wasm`` is your wasm file path
+| ``--abi`` is your abi file path
+| ``--action`` is your smart contract action name
+| ``--args`` is your action args
+
+**WARNING** If you don't have hello.wasm or hello.abi, go to `smart contract <xxxx>`_ to see how to generate them.
