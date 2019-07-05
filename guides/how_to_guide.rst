@@ -36,7 +36,16 @@ before, you need to run commands below to restore a clean directory
     or 
     $ ./start.sh del
 
-1. make directories to store keys and chaindata
+1. set environment variables
+
+.. code-block:: bash 
+
+    // **/path/to/gftlfile** is your **gftl.macos.v0.1.0** path
+    $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
+    $ export PATH=$PATH:/path/to/gftlfile
+
+
+2. make directories to store keys and chaindata
 
 .. code-block:: bash 
 
@@ -44,7 +53,7 @@ before, you need to run commands below to restore a clean directory
     $ mkdir data
     $ mkdir data1
     
-2. generate account , password after ``--pass`` of ``data/keys`` and ``data1/key`` should be the same
+3. generate account , password after ``--pass`` of ``data/keys`` and ``data1/key`` should be the same
 
 .. code-block:: bash 
 
@@ -62,7 +71,7 @@ before, you need to run commands below to restore a clean directory
 
 You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
 
-3. generate allocation
+4. generate allocation
 ::
     $ ./gtool gstate --pass 666 gen
     scan folder: data
@@ -70,7 +79,7 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
 
 ``gstate`` scans current directory to check ``keys`` directory, and generate ``genesis_alloc.json`` file.
 
-4. start nodes, ``data1`` node connects ``data`` node using ``enode`` flag
+5. start nodes, ``data1`` node connects ``data`` node using ``enode`` flag
 
 .. code-block:: bash 
 
@@ -100,13 +109,21 @@ before, you need to run commands below to restore a clean directory
     or 
     $ ./start.sh del
 
-1. make directories to store keys and chaindata
+1. set environment variables
+
+.. code-block:: bash 
+
+    // **/path/to/gftlfile** is your **gftl.macos.v0.1.0** path
+    $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
+    $ export PATH=$PATH:/path/to/gftlfile
+
+2. make directories to store keys and chaindata
 
 .. code-block:: bash 
 
     $ mkdir data
     
-2. generate account 
+3. generate account 
 
 .. code-block:: bash 
 
@@ -119,7 +136,7 @@ before, you need to run commands below to restore a clean directory
 
 You can see three kind of keys in ``data/keys`` directory.
 
-3. start nodes, ``data`` node connects ``Fractal Testnetwork`` node using ``enode`` flag.
+4. start nodes, ``data`` node connects ``Fractal Testnetwork`` node using ``enode`` flag.
 **remember to change enode to connect to official fractal node, you can get enode from**  `Fractal Bootnodes <xxxxxx>`_
 
 .. code-block:: bash 
@@ -130,11 +147,11 @@ You can see three kind of keys in ``data/keys`` directory.
 
 **NOTE: If you want to start mining for yourself, go on reading, otherwise you can stop here.**
 
-4: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
+5: create account in wallet, go to `fractal wallet <xxxx>`_ to see how to create account.
 
-5: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
+6: request balance from fractal, go to `fractal explorer <xxxx>`_ to see how to request balance.
 
-6: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
+7: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
 
 
 How to Send a Transaction step by step
