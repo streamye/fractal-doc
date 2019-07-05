@@ -40,7 +40,7 @@ before, you need to run commands below to restore a clean directory
 
 .. code-block:: bash 
 
-    // **/path/to/gftlfile** is your **gftl.macos.v0.1.0** path
+    // /path/to/gftlfile is the path you decompress gftl.macos.v0.1.0.tar.gz
     $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
     $ export PATH=$PATH:/path/to/gftlfile
 
@@ -113,7 +113,7 @@ before, you need to run commands below to restore a clean directory
 
 .. code-block:: bash 
 
-    // **/path/to/gftlfile** is your **gftl.macos.v0.1.0** path
+    // /path/to/gftlfile is the path you decompress gftl.macos.v0.1.0.tar.gz
     $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
     $ export PATH=$PATH:/path/to/gftlfile
 
