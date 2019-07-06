@@ -92,9 +92,8 @@ step 6: request balance from fractal, go to `fractal explorer <xxxx>`_ to see ho
 step 7: set mining coinbase to local node, go to `fractal wallet <xxxx>`_ to see how to set coinbase.
 
 | **NOTE**
-|  The main difference between ``Private-Network`` and ``TestNetwork`` is that you have to get balance from ``Testnetwork`` if you want to start-mining,
-|  while in ``Private-Testnetwork`` you can allocate balance for yourself.
-|  For simple use, you can just start a ``Private-Network`` as starter.After building ``Private-Network``,building  ``Testnetwork`` will be very simple.
+|  The main difference between ``Private-Network`` and ``TestNetwork`` is that you have to get balance from ``Testnetwork`` if you want to start-mining, while in ``Private-Testnetwork`` you can allocate balance for yourself.
+|  For simple use, you can just start a ``Private-Network`` as starter. After installing ``Private-Network``,installing  ``Testnetwork`` will be very simple.
 |
 
 If you want to look through details of each shell script ,go to `How to Guide <how_to_guide.html>`_ for more information.
@@ -114,7 +113,7 @@ Here we get our newest block back to indicate fractal node is working well:
 
 More about **start_private.sh**
 ---------------------------
-We have used ``start_private.sh`` or ``start.sh`` for several times, now we explain ``start_private.sh`` in detail, ``start.sh`` is the same:
+We have used ``start_private.sh`` or ``start.sh`` for several times, now we explain how to use ``start_private.sh`` in detail, ``start.sh`` is the same:
 
 1. start fractal node: use this command if you want to start fractal node; when you shut down your PC ,you can run this to get fractal node run again
 

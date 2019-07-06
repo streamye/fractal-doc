@@ -8,12 +8,12 @@ Here we introduce you a few common ``How To``  step-by-step.
 You’ll learn:
 
 - How to Start a ``Private-Network`` step by step.
-- How to Start a ``Testnetwork`` step by step.
+- How to Start a ``TestNetwork`` step by step.
 - How to Send a Transaction step by step.
 - How to Deploy a Smart Contract.
 
 | **NOTE**
-| The fractal CLI ``gtool`` is used like this :
+| The fractal CLI ``gtool`` is used like this,other commands are the same:
 |    ``$ gtool <main-command> [options...] [arguments...] <sub-command>``
 | It contains ``main-command`` and ``sub-command``.
 
@@ -63,7 +63,7 @@ before, you need to run commands below to restore a clean directory
     $ mkdir data
     $ mkdir data1
     
-3. generate account , password after ``--pass`` of ``data/keys`` and ``data1/key`` should be the same
+3. generate account , password after ``--pass`` of ``data/keys`` and ``data1/keys`` should be the same
 
 .. code-block:: bash 
 
@@ -89,7 +89,7 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
 
 ``gstate`` scans current directory to check ``keys`` directory, and generate ``genesis_alloc.json`` file.
 
-5. start nodes, ``data1`` node connects ``data`` node using ``enode`` flag
+5. start nodes, ``data1`` node connects ``data`` node using ``enode`` argument
 
 **If your operate on macOS**
 
@@ -108,7 +108,7 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
     $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log 2>&1 &
 
 
-**WARNNG** The second ``./gtool admin`` command can generate ``enode`` which is used in the third command, you must change the third ``nohup`` command's ``enode`` argument.
+**WARNNG** The second ``./gtool admin`` command can query ``enode`` which is used in the third command, you must assign ``--rpc`` server to get ``enode``, and you must change the third ``nohup`` command's ``enode`` argument.
 Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them, for example: adding 1 to the port number.
 
 
@@ -167,20 +167,20 @@ before, you need to run commands below to restore a clean directory
 
 You can see three kind of keys in ``data/keys`` directory.
 
-4. start nodes, ``data`` node connects ``Fractal Testnetwork`` node using ``enode`` flag.
-**remember to change enode to connect to official fractal node, you can get enode from**  `Fractal Bootnodes <xxxxxx>`_
+4. start nodes, ``data`` node connects ``Fractal Testnetwork`` node using ``enode`` argument.
+**Remember to change enode to connect to official fractal node, you can get enode from**  `Fractal Bootnodes <xxxxxx>`_
 
 **If your operate on macOS**
 
 .. code-block:: bash 
 
-    $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log &
+    $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl.log &
 
 **If you operate on ubuntu or centos**
 
 .. code-block:: bash 
 
-    $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log 2>&1 &
+    $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl.log 2>&1 &
 
 
 **WARNNG** Nodes may fail if the ports are in use : ``rpcport`` , ``port`` , ``pprofport`` , you should change them, for example: adding 1 to the port number.

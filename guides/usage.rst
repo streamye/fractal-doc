@@ -3,7 +3,7 @@ Usage
 **Chapter 3**
 
 This chapter covers all commands that appear in other chapters and explains how they work .
-We list here:
+We list them here:
 
 - gtool keys 
 - gtool gstate
@@ -13,8 +13,9 @@ We list here:
 - gftl 
 - wasmtest exec
 
-| The fractal CLI ``gtool`` is used like this :
+| The fractal CLI ``gtool`` is used like this, other commands are the same:
 | ``$ gtool <main-command> [options...] [arguments...] <sub-command>``
+| It contains ``main-command`` and ``sub-command``.
 
 
 gtool keys
@@ -25,7 +26,7 @@ generate account
 '''''''''''''''''
 **WARNING**
 Remember your password. The password is used for encryption of ``miner key`` , ``account key`` and ``packer key``.
-Note that, **password is different from keys** ,it is used to protect keys, so keys can be transfered in encryption, 
+Note that, **password is different from keys** ,it is used to protect keys, so keys can be transfered in encryption. 
 There are three kind of keys: one is for mining, one is for account and one is for packer.
 Packer key is used if you are a packer,so just ignore it.
 
@@ -70,8 +71,8 @@ If you want to look through informations like  account address ,miner address ..
 
 gtool gstate
 --------------
-This is a must step of ``Private-Network`` if you start node step-by-step, if we want to mine,
-we need stakes(account balance), original stakes are allocated in allocation-file. This command is to create
+This is a must step of ``Private-Network`` if you start node step-by-step, if you want to mine,
+you need stakes(account balance), original stakes are allocated in allocation-file. This command is to create
 an allocation-file.
 
 Generate allocation command is:
@@ -113,13 +114,14 @@ This command is to get your left balance on fractal chain. Balance information i
     t=2019-07-02T18:48:36+0800 lvl=info msg="get owner ok" addr=0x24c6Baa88a465E9a6A64fACa0725eBb4F87414e5 owner=0x0000000000000000000000000000000000000000
 
 | ``--rpc`` is your node connection
-| ``--addr`` is the account you want to check balance, if you don't know it ,you can use `list account` command to get addr.
+| ``--addr`` is the account you want to check balance, if you don't know it ,you can use `list account` command to get local addr or check the wallet.
 
 
 gtool tx
 --------------
 You can send transactions, we only put ``transfer balance from A user to B user`` here, but for smart contract use , go `smart contract <xxx>`_.
-send transaction command is :
+
+Send transaction command is :
 
 .. code-block:: bash 
 
@@ -158,7 +160,7 @@ If you want to start a backgroud-node , you can use ``nohup`` command.
 
     $ nohup gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8545 --datadir data --port 30303 --pprof --pprofport 6060 --verbosity 3 --mine --unlock 666 > gftl.log &
 
-If you want start a node and connect to a known one ,use ``enode``, below is data1 node connects to data node,remember to change ports if you run data1 node in the same physical machine:
+If you want start a node and connect to a known one ,use ``enode``, below is ``data1`` node connects to ``data`` node, remember to change ports if you run ``data1`` node in the same physical machine:
 
 .. code-block:: bash 
 
@@ -171,7 +173,7 @@ You can get ``enode`` using ``gtool admin`` command:
     $ gtool admin --rpc http://127.0.0.1:8545 enode
     enode://83afd5c4e7167257d1e0b161d54c1f2a581f948472912a33320df87e845fd13831e6242ab327ee489b92254468a55e9df5863c5bf5218b42f9aa039ff3b585be@10.1.1.168:30303
 
-**WARNING** If you want to check one node's enode, you need to assign rpc server.
+**WARNING** If you want to check one node's enode, you need to assign his rpc server.
 
 
 wasmtest exec
