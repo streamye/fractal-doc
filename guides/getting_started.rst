@@ -16,8 +16,8 @@ Here we provide macOs and Linux (Centos,Ubuntu) versions. You can download here:
 Download
 ''''''''''
 
-- `macOS download  <../_static/mac_file/gftl.macos.v0.1.0.zip>`_
-- `Linux download  <../_static/mac_file/gftl.macos.v0.1.0.zip>`_
+- `macOS download  <../_static/mac_file/gftl.macos.v0.1.0.tar.gz>`_
+- `Linux download  <../_static/ubuntu_file/gftl.ubuntu.v0.1.0.tar.gz>`_
 
 
  | **Command Line Notation**
