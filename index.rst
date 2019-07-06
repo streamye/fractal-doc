@@ -29,9 +29,9 @@ delve into details on a topic; we typically revisit the topic in a later chapter
 
 You’ll find three chapters in this Doc:
 
-- `Getting Started <guides/gettting_started.html>`_  explains how to install Fractal , how to Get Your First Block and more about how to use script file ``start_private.sh``. Here we provide ``Private-Network`` and ``TestNetwork`` for you to start.
+- `Getting Started <guides/getting_started.html>`_  explains how to install Fractal , how to Get Your First Block and more about how to use script file ``start_private.sh``. Here we provide ``Private-Network`` and ``TestNetwork`` for you to start.
 
-- `How To Guides <guides/how_to_guide.html>`_ is a detailed hands-on introduction to start node, it is more flexible than `Getting Started <guides/gettting_started.html>`_. Here we list steps , and later chapter 3 will provide additional details. 
+- `How To Guides <guides/how_to_guide.html>`_ is a detailed hands-on introduction to start node, it is more flexible than `Getting Started <guides/getting_started.html>`_. Here we list steps , and later chapter 3 will provide additional details. 
 
 - `Usage <guides/usage.html>`_ is usage description of every command in detail.
 
