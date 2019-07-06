@@ -46,7 +46,7 @@ before, you need to run commands below to restore a clean directory
     $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
     $ export PATH=$PATH:/path/to/gftlfile
 
-**If you operate on ubuntu**
+**If you operate on ubuntu or centos**
 
 .. code-block:: bash 
 
@@ -99,7 +99,7 @@ You can see three kind of keys in ``data/keys`` and ``data1/keys`` directories.
     $ ./gtool admin --rpc http://127.0.0.1:8545 enode
     $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log &
 
-**If you operate on ubuntu**
+**If you operate on ubuntu or centos**
 
 .. code-block:: bash 
 
@@ -140,7 +140,7 @@ before, you need to run commands below to restore a clean directory
     $ export DYLD_LIBRARY_PATH=/path/to/gftlfile
     $ export PATH=$PATH:/path/to/gftlfile
 
-**If you operate on ubuntu**
+**If you operate on ubuntu or centos**
 
 .. code-block:: bash 
 
@@ -176,7 +176,7 @@ You can see three kind of keys in ``data/keys`` directory.
 
     $ nohup ./gftl --config test.toml --genesisAlloc genesis_alloc.json --rpc --rpcport 8546 --datadir data1 --port 30304 --pprof --pprofport 6061 --verbosity 3 --mine --unlock 666 --bootnodes enode://2b36b97ea62b8ff41011223ff0720db7e468500e2aa3253668f13a9ecd15fbbd5c1ccce8252712c063cd166f1f7be95747574cf6a68d9726a3fad62cdb40f34e@127.0.0.1:30303 > gftl1.log &
 
-**If you operate on ubuntu**
+**If you operate on ubuntu or centos**
 
 .. code-block:: bash 
 

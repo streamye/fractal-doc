@@ -17,7 +17,8 @@ Download
 ''''''''''
 
 - `macOS download  <../_static/mac_file/gftl.macos.v0.1.0.tar.gz>`_
-- `Linux download  <../_static/ubuntu_file/gftl.ubuntu.v0.1.0.tar.gz>`_
+- `ubuntu download  <../_static/ubuntu_file/gftl.ubuntu.v0.1.0.tar.gz>`_
+- `centos download  <../_static/centos_file/gftl.centos.v0.1.0.tar.gz>`_
 
 
  | **Command Line Notation**
